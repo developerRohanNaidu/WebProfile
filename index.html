@@ -1,142 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        /* CSS Styles */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            transition: background-color 0.3s ease; /* Smooth transition for background color */
+        /* Your existing CSS styles here */
+
+        /* Custom animation for popping colors */
+        @keyframes popColor {
+            0% { color: #333; }
+            50% { color: #ff5733; }
+            100% { color: #333; }
         }
 
-        h1 {
-            margin-top: 50px;
-            color: #333;
-        }
-
-        p {
-            color: #333;
-            font-size: 18px;
-            margin-top: 20px;
-        }
-
-        .profile-photo {
-            display: block;
-            margin: 0 auto;
-            width: 200px; /* Adjust size as needed */
-            border-radius: 50%; /* Makes it circular */
-            margin-top: 30px;
-            transition: transform 0.3s ease; /* Smooth transition for profile photo */
-        }
-
-        .social-icons {
-            margin-top: 20px;
-        }
-
-        .social-icons a {
-            display: inline-block;
-            margin: 0 10px;
-        }
-
-        .summary {
-            margin-top: 30px;
-            text-align: left;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .social-icon {
-            width: 30px; /* Adjust size as needed */
-            height: 30px; /* Adjust size as needed */
-        }
-
-        /* Style for the modal */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 999;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-            animation: fadeIn 0.3s ease; /* Fade-in animation */
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 400px;
-            border-radius: 5px;
-            position: relative;
-            animation: slideIn 0.3s ease; /* Slide-in animation */
-        }
-
-        .close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            color: #888;
-            font-size: 20px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #000;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        /* Keyframes for animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideIn {
-            from {
-                transform: translateY(-50px);
-            }
-            to {
-                transform: translateY(0);
-            }
+        .pop-animation {
+            animation: popColor 2s infinite;
         }
     </style>
 </head>
 <body>
-    <h1>Mahesh Naidoo</h1>
-   
-    <img src="./profile_images/mahesh.jpg" alt="Profile Photo" class="profile-photo">
-    <div class="social-icons">
-        <a href="https://m.facebook.com/mtattoostudio"><img src="./assets/facebook.png" alt="Facebook" class="social-icon"></a>
-        <a href="https://www.gmail.com/yourprofile"><img src="./assets/social.png" alt="Email" class="social-icon"></a>
-        <a href="#" onclick="showWhatsAppCard()"><img src="./assets/whatsapp.png" alt="Whatsapp" class="social-icon"></a>
-        <a href="https://www.youtube.com/@mtattoostudio.4312/featured"><img src="./assets/youtube.png" alt="Youtube" class="social-icon"></a>
-        <a href="https://www.instagram.com/mtattoostudio818/"><img src="./assets/instagram.png" alt="Instagram" class="social-icon"></a>
-    </div>
-    <p>Contact number: 9822057818</p>
-    <p>Email: <a href="mailto:xyz@gmail.com"></a>@mtattoostudio.4312</p>
-
-    <div class="summary">
-        <h2>Professional Summary</h2>
-        <p>Mahesh Naidoo is an esteemed tattoo artist based in Nashik, Maharashtra. With a passion for artistry and innovation, Mahesh has established himself as a prominent figure in the tattoo industry. He owns and operates two premier studios, strategically located at prime addresses: one at Cine Max, College Rd, near McDonalds, Dattara Darshan, Nashik, Maharashtra 422101, and the other at Chandan Apartment, E-1, College Rd, opposite Dominos Pizza, D'souza Colony, Nashik, Maharashtra 422005.</p>
-        <p>Renowned for his impeccable skill and attention to detail, Mahesh has garnered widespread acclaim as one of the finest tattoo artists in Nashik. His clientele includes individuals seeking unique and personalized tattoo designs, ranging from intricate sleeves to minimalist masterpieces. Mahesh's dedication to his craft and commitment to exceeding client expectations have earned him accolades, including a prestigious 5-star rating from JustDial.</p>
-        <p>Committed to fostering a welcoming and inclusive environment, Mahesh ensures that each client receives personalized attention and exceptional service. His artistic vision, coupled with his professionalism and expertise, makes him a sought-after tattoo artist among enthusiasts and connoisseurs alike.</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="pop-animation">Mahesh Naidoo</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <img src="./profile_images/mahesh.jpg" alt="Profile Photo" class="profile-photo img-fluid rounded-circle">
+                <div class="social-icons mt-3">
+                    <a href="https://m.facebook.com/mtattoostudio"><img src="./assets/facebook.png" alt="Facebook" class="social-icon"></a>
+                    <a href="mailto:xyz@gmail.com"><img src="./assets/social.png" alt="Email" class="social-icon"></a>
+                    <a href="#" onclick="showWhatsAppCard()"><img src="./assets/whatsapp.png" alt="Whatsapp" class="social-icon"></a>
+                    <a href="https://www.youtube.com/@mtattoostudio.4312/featured"><img src="./assets/youtube.png" alt="Youtube" class="social-icon"></a>
+                    <a href="https://www.instagram.com/mtattoostudio818/"><img src="./assets/instagram.png" alt="Instagram" class="social-icon"></a>
+                </div>
+                <p class="mt-3">Contact number: 9822057818</p>
+                <p>Email: <a href="mailto:xyz@gmail.com">@mtattoostudio.4312</a></p>
+            </div>
+            <div class="col-md-6 col-lg-8">
+                <div class="summary">
+                    <h2 class="pop-animation">Professional Summary</h2>
+                    <p class="pop-animation">Mahesh Naidoo is an esteemed tattoo artist based in Nashik, Maharashtra. With a passion for artistry and innovation, Mahesh has established himself as a prominent figure in the tattoo industry...</p>
+                    <!-- More content here -->
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Modal for WhatsApp card -->
@@ -148,6 +60,91 @@
             <p>Contact: 9822057818</p>
         </div>
     </div>
+
+    <!-- Bootstrap JS (optional, for components that require JS) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript to show and close the modal -->
+    <script>
+        function showWhatsAppCard() {
+            var modal = document.getElementById("whatsappModal");
+            modal.style.display = "block";
+            document.body.style.backgroundColor = "rgba(0, 0, 0, 0.5)"; /* Change background color */
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("whatsappModal");
+            modal.style.display = "none";
+            document.body.style.backgroundColor = "#f0f0f0"; /* Restore original background color */
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Your existing CSS styles here */
+
+        /* Custom animation for popping colors */
+        @keyframes popColor {
+            0% { color: #333; }
+            50% { color: #ff5733; }
+            100% { color: #333; }
+        }
+
+        .pop-animation {
+            animation: popColor 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="pop-animation">Mahesh Naidoo</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <img src="./profile_images/mahesh.jpg" alt="Profile Photo" class="profile-photo img-fluid rounded-circle">
+                <div class="social-icons mt-3">
+                    <a href="https://m.facebook.com/mtattoostudio"><img src="./assets/facebook.png" alt="Facebook" class="social-icon"></a>
+                    <a href="mailto:xyz@gmail.com"><img src="./assets/social.png" alt="Email" class="social-icon"></a>
+                    <a href="#" onclick="showWhatsAppCard()"><img src="./assets/whatsapp.png" alt="Whatsapp" class="social-icon"></a>
+                    <a href="https://www.youtube.com/@mtattoostudio.4312/featured"><img src="./assets/youtube.png" alt="Youtube" class="social-icon"></a>
+                    <a href="https://www.instagram.com/mtattoostudio818/"><img src="./assets/instagram.png" alt="Instagram" class="social-icon"></a>
+                </div>
+                <p class="mt-3">Contact number: 9822057818</p>
+                <p>Email: <a href="mailto:xyz@gmail.com">@mtattoostudio.4312</a></p>
+            </div>
+            <div class="col-md-6 col-lg-8">
+                <div class="summary">
+                    <h2 class="pop-animation">Professional Summary</h2>
+                    <p class="pop-animation">Mahesh Naidoo is an esteemed tattoo artist based in Nashik, Maharashtra. With a passion for artistry and innovation, Mahesh has established himself as a prominent figure in the tattoo industry...</p>
+                    <!-- More content here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for WhatsApp card -->
+    <div id="whatsappModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img src="./profile_images/mahesh.jpg" alt="Profile Photo" style="width: 100px; border-radius: 50%; margin-bottom: 10px;">
+            <h3>Mahesh Naidoo</h3>
+            <p>Contact: 9822057818</p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (optional, for components that require JS) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- JavaScript to show and close the modal -->
     <script>
