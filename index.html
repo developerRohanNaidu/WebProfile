@@ -9,17 +9,6 @@
     <style>
         /* Your existing CSS styles here */
 
-        /* Custom animation for popping colors */
-        @keyframes popColor {
-            0% { color: #333; }
-            50% { color: #ff5733; }
-            100% { color: #333; }
-        }
-
-        .pop-animation {
-            animation: popColor 2s infinite;
-        }
-
         /* Adjust size of social icons */
         .social-icon {
             width: 40px; /* Adjust size as needed */
@@ -82,51 +71,37 @@
             color: #fff;
         }
 
-        /* Coin flip animation */
-        @keyframes coinFlip {
-            0% {
-                transform: rotateY(0deg);
-            }
-            50% {
-                transform: rotateY(90deg);
-                background-image: url(https://www.freeiconspng.com/thumbs/earth-png/planet-earth-png-4.png);
-            }
-            100% {
-                transform: rotateY(180deg);
-            }
-        }
-
-        .coin-container {
-            perspective: 1000px;
-            display: inline-block;
-            cursor: pointer;
-        }
-
-        .coin {
-            width: 100px;
-            height: 100px;
-            position: relative;
-            transform-style: preserve-3d;
-        }
-
-        .coin img {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            backface-visibility: hidden;
+        /* Profile photo style */
+        .profile-photo {
+            border: 4px solid orange; /* Add a border around the profile photo */
             border-radius: 50%;
-            animation: coinFlip 2s ease-in-out forwards; /* Initial animation state */
+            padding: 5px;
+        }
+
+        /* Remove pop animation from text */
+        h1, h2, p {
+            animation: none !important;
+        }
+
+        /* Remove coin flip animation */
+        .coin img {
+            animation: none;
+        }
+
+        /* Add space around the profile photo */
+        .profile-container {
+            padding: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <h1 class="pop-animation text-center">Mahesh Naidoo</h1>
+            <div class="col-12 text-center">
+                <h1 class="text-center">Mahesh Naidoo</h1>
             </div>
         </div>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center profile-container">
             <div class="col-sm-12 col-md-6 col-lg-4 text-center">
                 <div class="coin-container" onclick="flipCoin()">
                     <div class="coin">
@@ -145,8 +120,8 @@
             </div>
             <div class="col-sm-12 col-md-6 col-lg-8">
                 <div class="summary">
-                    <h2 class="pop-animation">Professional Summary</h2>
-                    <p class="pop-animation">Mahesh Naidoo is an esteemed tattoo artist based in Nashik, Maharashtra. With a passion for artistry and innovation, Mahesh has established himself as a prominent figure in the tattoo industry...</p>
+                    <h2>Professional Summary</h2>
+                    <p>Mahesh Naidoo is an esteemed tattoo artist based in Nashik, Maharashtra. With a passion for artistry and innovation, Mahesh has established himself as a prominent figure in the tattoo industry...</p>
                     <!-- More content here -->
                 </div>
             </div>
@@ -180,11 +155,11 @@
             document.body.style.backgroundColor = "#f0f0f0"; /* Restore original background color */
         }
 
-        // Coin flip animation function
-        function flipCoin() {
-            var coin = document.querySelector('.coin img');
-            coin.style.animation = 'coinFlip 2s ease-in-out forwards'; // Trigger the animation
-        }
+        // Coin flip animation function (removed)
+        // function flipCoin() {
+        //     var coin = document.querySelector('.coin img');
+        //     coin.style.animation = 'coinFlip 2s ease-in-out forwards'; // Trigger the animation
+        // }
     </script>
 </body>
 </html>
