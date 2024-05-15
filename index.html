@@ -163,6 +163,43 @@
         .blinking-text {
             animation: blink 1.5s infinite;
             color: orange;
+            font-size: 24px; /* Increase font size */
+        }
+
+        /* Arrow animation */
+        @keyframes arrow {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .arrow {
+            animation: arrow 1s infinite;
+            color: orange;
+            font-size: 36px;
+            margin-top: 10px;
+        }
+
+        /* Animation for booking sentence */
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .booking-sentence {
+            animation: slideIn 1s ease-in-out;
         }
     </style>
 </head>
@@ -184,7 +221,6 @@
                 </div>
                 <div class="social-icons mt-3">
                     <a href="https://m.facebook.com/mtattoostudio"><img src="./assets/facebook.png" alt="Facebook" class="social-icon"></a>
-                    <a href="mailto:xyz@gmail.com"><img src="./assets/social.png" alt="Email" class="social-icon"></a>
                     <a href="#" onclick="showWhatsAppCard()"><img src="./assets/whatsapp.png" alt="Whatsapp" class="social-icon"></a>
                     <a href="https://www.youtube.com/@mtattoostudio.4312/featured"><img src="./assets/youtube.png" alt="Youtube" class="social-icon"></a>
                     <a href="https://www.instagram.com/mtattoostudio818/"><img src="./assets/instagram.png" alt="Instagram" class="social-icon"></a>
@@ -222,7 +258,14 @@
         <!-- Blinking text -->
         <div class="row justify-content-center">
             <div class="col-md-12 text-center">
-                <p class="blinking-text">EMI AVAILABLE FOR YOUR TATTOO</p>
+                <p class="blinking-text">EMI AVAILABLE FOR YOUR TATTOO<span class="arrow">⇩</span></p>
+            </div>
+        </div>
+
+        <!-- Booking sentence -->
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center booking-sentence">
+                <p>Book your Tattoo Appointment now and carve your imagination on your canvas, bringing your dreams to life and making them a part of you!</p>
             </div>
         </div>
     </div>
