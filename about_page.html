@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,12 +23,56 @@
         p {
             margin-bottom: 20px;
         }
+        /* Styling for the image slider */
+        .swiper-container {
+            width: 100%;
+            height: 300px; /* Adjust height as needed */
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #000;
+        }
+        .swiper-slide img {
+            width: auto;
+            max-height: 100%;
+        }
     </style>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
     <div class="container">
         <h1>Mahesh Naidoo</h1>
         <p>One of the most renowned tattoo artists in Nashik. Born in Nashik, Mahesh has multiple studios all over the city. He has also taught many students, with enthusiasts coming from across the country to learn from him.</p>
+
+        <!-- Image slider -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="tattoo_images/IMG_0004.JPG" alt="Tattoo Image"></div>
+                <div class="swiper-slide"><img src="tattoo_images/IMG_0005.JPG" alt="Tattoo Image"></div>
+                <div class="swiper-slide"><img src="tattoo_images/IMG_0006.JPG" alt="Tattoo Image"></div>
+                <div class="swiper-slide"><img src="tattoo_images/IMG_0007.JPG" alt="Tattoo Image"></div>
+                <div class="swiper-slide"><img src="tattoo_images/IMG_0008.JPG" alt="Tattoo Image"></div>
+                <div class="swiper-slide"><img src="tattoo_images/IMG_0009.JPG" alt="Tattoo Image"></div>
+                <div class="swiper-slide"><img src="tattoo_images/IMG_0010.JPG" alt="Tattoo Image"></div>
+                <div class="swiper-slide"><img src="tattoo_images/IMG_0011.JPG" alt="Tattoo Image"></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
     </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
 </body>
 </html>
