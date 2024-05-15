@@ -146,6 +146,24 @@
             color: #fff;
             margin-bottom: 5px;
         }
+
+        /* Blinking text animation */
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .blinking-text {
+            animation: blink 1.5s infinite;
+            color: orange;
+        }
     </style>
 </head>
 <body>
@@ -198,6 +216,13 @@
                 <p>Maharashtra 422101</p>
                 
                 <p><a href="https://maps.app.goo.gl/1v2cAcYiNn2PTxao9">View on Map</a></p>
+            </div>
+        </div>
+
+        <!-- Blinking text -->
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center">
+                <p class="blinking-text">EMI AVAILABLE FOR YOUR TATTOO</p>
             </div>
         </div>
     </div>
